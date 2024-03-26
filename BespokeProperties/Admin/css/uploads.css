@@ -1,0 +1,179 @@
+.header {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    font-family: calibri;
+}
+
+.upload-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-field {
+    position: relative;
+    border-top: solid transparent;
+    margin-bottom: -15px;
+    display: inline-block;
+    --field-padding: 12px;
+    margin-top: 20px;
+}
+
+.input-field input,
+.input-field select {
+    border: 2px solid #ddd;
+    appearance: none;
+    padding: var(--field-padding);
+    border-radius: 3px;
+    width: 250px;
+    outline: none;
+    font-size: 14px;
+    background: none;
+}
+
+.input-field select {
+    width: 280px;
+}
+
+.input-field .placeholder {
+    position: absolute;
+    left: var(--field-padding);
+    width: calc(100% -(var(--field-padding)*2));
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    top: 22px;
+    z-index: -1;
+    line-height: 20px;
+    transform: translateY(-50%);
+    color: #171515;
+    transition:
+        top 0.3s ease;
+    color: 0.3s ease;
+    font-size: 0.3s ease;
+    font-family: calibri;
+}
+
+.input-field input.dirty,
+.input-field select.dirty,
+.input-field input:focus,
+.input-field select:focus,
+.input-field select :not(:placeholder-shown),
+.input-field input:not(:placeholder-shown) {
+    border-color: rgb(14, 133, 60);
+    transition-delay: 0.1s;
+}
+
+.input-field input.dirty+.placeholder,
+.input-field textarea.dirty+.placeholder,
+.input-field input:focus+.placeholder,
+.input-field select:focus+.placeholder,
+.input-field select:not(:placeholder-shown)+.placeholder,
+.input-field input:not(:placeholder-shown)+.placeholder {
+    top: 0px;
+    font-size: 13px;
+    line-height: 12px;
+    color: black;
+    font-family: calibri;
+    background-color: #fff;
+    width: auto;
+    z-index: 1;
+}
+
+label.choose-file {
+    margin: 0;
+    display: inline-block;
+    padding: 10px;
+    width: auto;
+    max-width: 300px;
+    height: auto;
+    background-color: #929292;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -webkit-transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -ms-transition: 0.2s ease all;
+    -o-transition: 0.2s ease all;
+    transition: 0.2s ease all;
+    font-family: calibri;
+}
+
+.choose-file:hover {
+    background: #adadad;
+}
+
+.button {
+    text-align: center;
+    margin-left: 140px;
+    margin-top: 30px;
+    width: 80px;
+    height: 30px;
+    font-size: 17px;
+    font-family: calibri;
+    background-color: #929292;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+}
+
+.image-input img {
+    max-width: 175px;
+    display: none;
+}
+
+.image-input span {
+    display: none;
+    text-align: center;
+    cursor: pointer;
+    width: 300px;
+    height: 300px;
+}
+
+#picture__input {
+    display: none;
+}
+
+.picture {
+    min-width: 250px;
+    max-width: 500px;
+    aspect-ratio: 156/160;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    border: 2px dashed currentcolor;
+    cursor: pointer;
+    font-family: sans-serif;
+    transition: color 300ms ease-in-out,
+        background 300ms ease-in-out;
+    outline: none;
+    overflow: hidden;
+}
+
+.picture:hover {
+    color: #777;
+    background: #ccc;
+}
+
+.picture:active {
+    border-color: turquoise;
+    color: turquoise;
+    background: #eee;
+}
+
+.picture:focus {
+    color: #777;
+    background: #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.picture__img {
+    max-width: 100%;
+}
