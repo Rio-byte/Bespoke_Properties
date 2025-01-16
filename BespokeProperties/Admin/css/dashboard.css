@@ -1,0 +1,201 @@
+        /*importing font awesome icons */
+        @import url(https://use.fontawesome.com/releases/v6.4.2/css/all.css);
+        /* @import url(https://fonts.googleapis.com/css?family=Segoe);  */
+        @import url(https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap);
+
+        .top-nav {
+            display: flex;
+            justify-content: center;
+        }
+
+        .logo {
+            margin-top: -20px;
+            margin-right: auto;
+        }
+
+        .icons {
+            margin-left: auto;
+            margin-top: 10px;
+        }
+
+        .icons a {
+            color: rgb(7, 154, 29);
+            text-decoration: none;
+            font-size: 23px;
+            padding: 16px 16px;
+        }
+
+        .search-bar {
+            margin-top: 20px;
+        }
+
+        .input-field {
+            position: relative;
+            border-top: solid transparent;
+            display: inline-block;
+            --field-padding: 12px;
+            margin-top: -10px;
+        }
+
+        .input-field input {
+            border: 2px solid #b7b3b3;
+            appearance: none;
+            padding: var(--field-padding);
+            border-radius: 20px;
+            width: 250px;
+            text-indent: 10px;
+            outline: none;
+            font-size: 14px;
+            font-weight: 600;
+            background: none;
+        }
+
+        .input-field .placeholder {
+            position: absolute;
+            left: var(--field-padding);
+            width: calc(100% -(var(--field-padding)*2));
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            top: 22px;
+            z-index: -1;
+            line-height: 20px;
+            transform: translateY(-50%);
+            color: #171515;
+            transition:
+                top 0.3s ease;
+            color: 0.3s ease;
+            font-size: 0.3s ease;
+            font-family: calibri;
+        }
+
+        .input-field input.dirty,
+        .input-field textarea.dirty,
+        .input-field input:focus,
+        .input-field textarea:focus,
+        .input-field textarea :not(:placeholder-shown),
+        .input-field input:not(:placeholder-shown) {
+            border-color: rgb(18, 167, 11);
+            transition-delay: 0.1s;
+        }
+
+        .input-field input.dirty+.placeholder,
+        .input-field textarea.dirty+.placeholder,
+        .input-field input:focus+.placeholder,
+        .input-field textarea:focus+.placeholder,
+        .input-field textarea:not(:placeholder-shown)+.placeholder,
+        .input-field input:not(:placeholder-shown)+.placeholder {
+            top: 0px;
+            font-size: 16px;
+            line-height: 12px;
+            color: black;
+            font-family: calibri;
+            background-color: #fff;
+            width: auto;
+            z-index: 1;
+        }
+
+        .search-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            border-style: solid;
+            border-width: 0.5px;
+            border-color: gray;
+        }
+
+        .search-btn i {
+            font-size: 22px;
+            color: rgb(22, 200, 22);
+        }
+
+        .side-nav {
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            height: 100vh;
+            background-color: rgb(223, 223, 236);
+            width: 200px;
+        }
+
+        .menu a {
+            color: black;
+            text-decoration: none;
+            font-size: 22px;
+            font-family: "calibri";
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+
+        .menu {
+            list-style: none;
+            padding-top: 50px;
+        }
+
+        .menu a i {
+            color: rgb(71, 99, 73);
+            padding-right: 10px;
+        }
+
+        .badges {
+            display: flex;
+            justify-content: space-evenly;
+            margin-left: 220px;
+        }
+
+        .badge {
+            width: 200px;
+            height: 120px;
+            background-color: rgba(10, 115, 138, 0.615);
+            border-radius: 20px;
+            box-shadow: 0 0 5px gray;
+        }
+
+        .badge b {
+            font-family: arial;
+            font-size: 35px;
+            position: relative;
+            margin-bottom: -10px;
+            margin-left: 10px;
+            color: bisque;
+        }
+
+        .badge i {
+            font-size: 35px;
+            color: rgb(211, 235, 208);
+            position: absolute;
+            margin-top: 30px;
+            margin-left: 30px;
+        }
+
+        .badge p {
+            font-family: calibri;
+            color: rgb(4, 4, 4);
+            font-size: 17px;
+            margin-left: 20px;
+            margin-top: 30px;
+        }
+
+        .uploads {
+            margin-left: 90%;
+            margin-top: 20px;
+        }
+
+        .uploads span a {
+            text-decoration: none;
+            color: rgb(94, 93, 93);
+            font-family: "calibri";
+            padding-top: 4px;
+            padding-bottom: 4px;
+            padding-left: 7px;
+            padding-right: 7px;
+        }
+
+        .uploads span {
+            border-color: rgb(7, 158, 151);
+            border-width: 1px;
+            border-radius: 3px;
+            border-style: solid;
+            width: fit-content;
+            background-color: rgba(175, 211, 247, 0.404);
+        }
